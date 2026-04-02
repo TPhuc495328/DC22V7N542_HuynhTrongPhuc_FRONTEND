@@ -19,7 +19,7 @@ export default {
     filteredContacts() {
       if (!this.searchText) return this.contacts;
       return this.contacts.filter((c) =>
-        (c.name + c.email + c.phone).includes(this.searchText)
+        (c.name + c.email + c.phone).includes(this.searchText),
       );
     },
 
@@ -55,6 +55,18 @@ export default {
 
     <div class="col-md-6 mt-3">
       <ContactCard v-if="activeContact" :contact="activeContact" />
+
+      <router-link
+        v-if="activeContact"
+        :to="{
+          name: 'contact.edit',
+          params: { id: activeContact._id },
+        }"
+      >
+        <span class="mt-2 badge badge-warning">
+          <i class="fas fa-edit"></i> Hiệu chỉnh
+        </span>
+      </router-link>
     </div>
   </div>
 </template>
