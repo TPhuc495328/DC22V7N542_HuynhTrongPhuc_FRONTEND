@@ -67,6 +67,9 @@ export default {
           <i class="fas fa-edit"></i> Hiệu chỉnh
         </span>
       </router-link>
+      <router-link :to="{ name: 'contact.add' }" class="btn btn-success mb-3">
+        + Thêm liên hệ
+      </router-link>
     </div>
   </div>
 </template>
