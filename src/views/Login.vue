@@ -1,6 +1,6 @@
 <template>
   <div class="container mt-5">
-    <h3>Đăng ký</h3>
+    <h3>Đăng nhập</h3>
 
     <form @submit.prevent="handleRegister">
       <input
